@@ -1,19 +1,19 @@
 function time(input) {
-  var sek="";
-  var min="";
-  var godz="";
+  var secs="";
+  var mins="";
+  var hrs="";
   var answer="";
   if(input!==null){
-    sek = input%60+' sek.';
+    secs = input%60+' sek.';
     if (input>=60) {
       input=Math.floor(input/60);
-      min = input%60+' min. ';
+      mins = input%60+' min. ';
       if (input>=60) {
         input=Math.floor(input/60);
-        godz = input+' godz. ';
+        hrs = input+' godz. ';
       }
     }
-    answer = godz+min+sek;
+    answer = hrs+mins+secs;
   }
   return answer;
 }
